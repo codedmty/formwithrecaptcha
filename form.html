@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    
+    <body>
+        
+        <form method="post" action="formsubmit.php"> <!--Action default is formsubmit.php, if you change .php file name, change here-->
+            <div>
+                <input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
+            </div>
+            <div>
+                <input type="text" name="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
+            </div>
+            <div>
+                <textarea type="text" name="message" value="Mensaje" onFocus="if (this.value == 'Mensaje') this.value = '';" onBlur="if (this.value == '') this.value = 'Mensaje';">Message</textarea>
+            </div>
+            <input type="submit" name="submit" value="Send Message" />
+            <div class="g-recaptcha" data-sitekey="PUT YOUR SITE KEY HERE"></div>  <!-- Put your client side site key here -->
+        </form>
+        
+    </body>
+    
+</html>
